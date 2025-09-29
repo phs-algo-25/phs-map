@@ -1,0 +1,69 @@
+* {
+    transition: all 0.2s;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    margin: 0;
+    overflow: hidden;
+    /* background: #eee; */
+    background: url("exfloor.webp") 100% 0%/cover no-repeat;
+}
+
+canvas {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+
+#bg-grab {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    inset: 0;
+    z-index: 0;
+}
+
+#ui {
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    pointer-events: none;
+}
+
+#ui div {
+    background: #1111;
+    display: flex;
+    padding: .25rem;
+    pointer-events: fill;
+    gap: 0.25rem;
+    border-radius: .5rem;
+    
+    backdrop-filter: blur(1rem);
+}
+
+#ui button {
+    background: transparent;
+    border: #222 1px solid;
+    min-width: 2rem;
+    height: 2rem;
+    color: #111;
+    border-radius: .25rem;
+}
+
+#ui button:hover {
+    background: #1114;
+    cursor: pointer;
+}
+
+#ui button[selected] {
+    border: rgb(56, 136, 255) 2px solid;
+}
+
